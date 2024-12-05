@@ -12,10 +12,13 @@ namespace BankAccountAndBuilding
             int accountTypeInput = int.Parse(Console.ReadLine());
             AccountType accountType = (AccountType)accountTypeInput;
 
-            string uniqueAccountNumber = BankAccount.GenerateUniqueAccountNumber();
-            BankAccount account = new BankAccount(accountType, uniqueAccountNumber);
+            Console.Write("Введите номер счета (максимум 20 цифр): ");
+            string accountNumber = Console.ReadLine();
 
-            Console.Write("Введите начальный баланс: ");
+            BankAccount account = new BankAccount(accountType, accountNumber);
+
+            // Ввод начального баланса
+            Console.Write("Введите начальный баланс: ");
             decimal initialBalance;
             while (!decimal.TryParse(Console.ReadLine(), out initialBalance))
             {
@@ -23,6 +26,7 @@ namespace BankAccountAndBuilding
             }
             account.SetBalance(initialBalance);
             account.DisplayInfo();
+            Console.WriteLine();
 
             // Упражнение 7.2
             Console.WriteLine("Упражнение 7.2");
