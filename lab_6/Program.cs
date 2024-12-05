@@ -47,7 +47,7 @@ namespace BankAccountAndBuilding
             account.SetBalance(account.GetBalance() + depositAmount);
             account.DisplayInfo();
 
-            Console.Write("Введите сумму для снятия с счета: ");
+            Console.Write("Введите сумму для снятия со счета: ");
             decimal withdrawAmount;
             while (!decimal.TryParse(Console.ReadLine(), out withdrawAmount))
             {

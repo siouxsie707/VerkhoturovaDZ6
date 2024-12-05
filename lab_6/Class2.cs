@@ -6,7 +6,7 @@ namespace BankAccountAndBuilding
     {
         private static int lastBuildingNumber = 1;
         private int buildingNumber;
-        private float height; // В метрах
+        private float height;
         private int floors;
         private int apartments;
         private int entrances;

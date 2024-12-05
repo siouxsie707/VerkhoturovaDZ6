@@ -11,8 +11,8 @@ namespace BankAccountAndBuilding
 {
     public class BankAccount
     {
-        private static int nextAccountNumber = 0; // Начинаем с 0
-        private string accountNumber; // Храним номер счета как строку
+        private static int nextAccountNumber = 0;
+        private string accountNumber;
         private decimal balance;
         private AccountType accountType;
 
@@ -26,7 +26,7 @@ namespace BankAccountAndBuilding
         public static string GenerateUniqueAccountNumber()
         {
             nextAccountNumber++;
-            return nextAccountNumber.ToString().PadLeft(20, '0'); // Генерируем 20-значный номер, дополняя нулями слева
+            return nextAccountNumber.ToString().PadLeft(20, '0');
         }
 
         public void DisplayInfo()
