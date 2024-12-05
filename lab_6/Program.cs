@@ -17,7 +17,6 @@ namespace BankAccountAndBuilding
 
             BankAccount account = new BankAccount(accountType, accountNumber);
 
-            // Ввод начального баланса
             Console.Write("Введите начальный баланс: ");
             decimal initialBalance;
             while (!decimal.TryParse(Console.ReadLine(), out initialBalance))
